@@ -1,0 +1,161 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+<head>
+
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    {% include 'partials/metadata.html.twig' %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+    {% block stylesheets %}
+        {% do assets.addCss('theme://css/bootstrap.css') %}
+        {% do assets.addCss('theme://css/font-awesome.min.css') %}
+        {% do assets.addCss('theme://css/line-icon/style.css') %}
+        {% do assets.addCss('theme://css-compiled/main.css') %}
+
+        {% if browser.getBrowser == 'msie' and browser.getVersion == 10 %}
+            {% do assets.addCss('theme://css/nucleus-ie10.css') %}
+        {% endif %}
+        {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
+            {% do assets.addCss('theme://css/nucleus-ie9.css') %}
+            {% do assets.addJs('theme://js/html5shiv-printshiv.min.js') %}
+        {% endif %}
+    {% endblock %}
+    {{ assets.css() }}
+
+    {% block javascripts %}
+        {% do assets.addJs('jquery',101) %}
+        {% do assets.addJs('theme://js/bootstrap.min.js',100) %}
+        {% do assets.addJs('theme://js/main.js') %}
+    {% endblock %}
+    {{ assets.js() }}
+
+{% endblock head%}
+</head>
+<body id="top" class="{{ page.header.body_classes }}">
+    <div id="sb-site">
+        {% block header %}
+            <nav class="navbar-top bg-inverse">
+                <div class="nav-bar">
+                    <a href="#">
+                        <img class="nav-bar__logo " src="https://balltoro.com/ui/web/images/main-logo.png">
+                    </a>
+                    <button class="navbar-toggler pull-xs-right nav-bar__toggler" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+            <div class="collapse" id="exCollapsingNavbar">
+                <div class="bg-inverse nav-bar">
+                    <ul class="nav-bar__dropdown--position">
+                        <li>
+                            <a href="#" class="nav-list__menu">ผลบอลวันนี้</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-list__menu">ตารางการแข่งขัน</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-list__menu" data-toggle="collapse" data-target="#drilldown-1">
+                                ข่าวฟุตบอล
+                                <i class="fa fa-chevron-down"></i>
+                            </a>
+                            <ul id="drilldown-1" class="nav nav-pills nav-stacked collapse">
+                                <li>
+                                    <a href="#" class="nav-list__collapse">
+                                        <i class="fa fa-angle-right nav-list__collapse--icon"></i>
+                                        English Premier League
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-list__collapse">
+                                        <i class="fa fa-angle-right nav-list__collapse--icon"></i>
+                                        Thai Premier League
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-list__collapse">
+                                        <i class="fa fa-angle-right nav-list__collapse--icon"></i>
+                                        ข่าวทั้งหมด
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-list__menu" data-toggle="collapse" data-target="#drilldown-2">
+                                สกู๊ปฟุตบอล
+                                <i class="fa fa-chevron-down"></i>
+                            </a>
+                            <ul id="drilldown-2" class="nav nav-pills nav-stacked collapse">
+                                <li>
+                                    <a href="#" class="nav-list__collapse">
+                                        <i class="fa fa-angle-right nav-list__collapse--icon"></i>
+                                        English Premier League
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-list__collapse">
+                                        <i class="fa fa-angle-right nav-list__collapse--icon"></i>
+                                        Thai Premier League
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-list__collapse">
+                                        <i class="fa fa-angle-right nav-list__collapse--icon"></i>
+                                        สกู๊ปทั้งหมด
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-list__menu" type="button"><i class="fa fa-sign-in fa-2x"></i> เข้าสู่ระบบ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        {% endblock %}
+        {% block showcase %}{% endblock %}
+
+        {% block body %}
+            {% block content %}{% endblock %}
+        {% endblock %}
+
+        {% block footer %}
+            <footer class="footer">
+                <ul>
+                    <li><a href="#" class="footer__link">หน้าแรก</a></li>
+                    <li><a href="#" class="footer__link">ผลบอลวันนี้</a></li>
+                    <li><a href="#" class="footer__link">ตารางการแข่งขัน</a></li>
+                    <li><a href="#" class="footer__link">ข่าวฟุตบอล</a></li>
+                    <li><a href="#" class="footer__link">สกู๊ปทั้งหมด</a></li>
+                    <li><a href="#" class="footer__link">กฎและข้อตกลง</a></li>
+                    <li><a href="#" class="footer__link">เกี่ยวกับเรา</a></li>
+                </ul>
+                <div class="footer-social text-xs-center">
+                    <a href="#" class="footer-social__icon footer-social__icon--facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="footer-social__icon footer-social__icon--twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="footer-social__icon footer-social__icon--pinterest"><i class="fa fa-pinterest-p"></i></a>
+                    <a href="#" class="footer-social__icon footer-social__icon--google-plus"><i class="fa fa-google-plus"></i></a>
+                    <p>Copyright © 2015</p>
+                </div>
+            </footer>
+        {% endblock %}
+    </div>
+    {% block bottom %}
+        {{ assets.js('bottom') }}
+        <script>
+        $(function () {
+            $(document).ready(function() {
+              $.slidebars({
+                hideControlClasses: true,
+                scrollLock: true
+              });
+            });
+        });
+        </script>
+    {% endblock %}
+</body>
+</html>
