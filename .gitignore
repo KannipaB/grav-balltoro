@@ -1,2 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 /cache
+
+cache/compiled/config/master-localhost.php
+
+*.log
