@@ -4,3 +4,11 @@
 cache/compiled/config/master-localhost.php
 
 *.log
+
+logs/popularity/daily.json
+
+logs/popularity/daily.json
+
+logs/popularity/monthly.json
+
+logs/popularity/visitors.json
