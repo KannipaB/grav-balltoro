@@ -1,14 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
 /cache
-
-cache/compiled/config/master-localhost.php
-
+/logs
 *.log
-
-logs/popularity/daily.json
-
-logs/popularity/daily.json
-
-logs/popularity/monthly.json
-
-logs/popularity/visitors.json

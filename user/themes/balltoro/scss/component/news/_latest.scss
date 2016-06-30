@@ -26,10 +26,6 @@ $latest-details-color: rgba(0, 0, 0, .68);
         }
         &--date {
             color: $latest-date-color;
-            &:before {
-                font-family: FontAwesome;
-                content: " \f017 ";
-            }
         }
         &--headline {
         }
