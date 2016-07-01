@@ -1,5 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
+*~
+.DS_Store
+.idea
 /cache
 /logs
-/logs/*/*json
 *.log
