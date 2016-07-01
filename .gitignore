@@ -5,3 +5,5 @@
 /cache
 /logs
 *.log
+/node_modules
+/vendor
