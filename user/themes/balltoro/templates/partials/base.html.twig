@@ -22,13 +22,21 @@
 
     <body id="top" class="{{ page.header.body_classes }}">
         <div id="sb-site">
-            {% block navbar %}{% include 'partials/navbar.html.twig' %}{% endblock %}
-            {% block breadcrumb %}{% include('partials/breadcrumb.html.twig') %}{% endblock %}
+            {% block navbar %}
+                {% include 'partials/navbar.html.twig' %}
+                {% include 'partials/navbar.mobile.html.twig' %}
+            {% endblock %}
+
+            {% block breadcrumb %}
+                {% include('partials/breadcrumb.html.twig') %}
+            {% endblock %}
 
             {% block body %}
                 {% block social_box %}{% endblock %}
                 {% block content %}{% endblock %}
-                {% block footer %}{% endblock %}
+                {% block footer %}
+                    {% include 'partials/footer.html.twig' %}
+                {% endblock %}
             {% endblock %}
         </div>
         {% block scripts %}{% endblock %}
