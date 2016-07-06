@@ -1,4 +1,3 @@
-{% set link = '#' %}
 
 <div class="row result-board">
     <div class="table-description">
@@ -27,26 +26,76 @@
             </tr>
             </thead>
             <tbody>
-            {%  for i in range(1, 8)%}
-                {% if  i==1 %}
-                    {#  row score link goes in data-href='#'  #}
-                    <tr class="rank-1 league-table clickable-row" data-href='{{link}}'>
-                {% elseif i==2 %}
-                    <tr class="rank-2 league-table clickable-row" data-href='{{link}}'>
-                {% elseif i==3 %}
-                    <tr class="rank-3 league-table clickable-row" data-href='{{link}}'>
-                {% elseif i==4 %}
-                    <tr class="rank-4 league-table clickable-row" data-href='{{link}}#'>
-                {% else %}
-                    <tr class="league-table clickable-row" data-href='{{link}}'>
-                {% endif %}
-                        <td>{{i}}</td>
-                        <td class="league-table__team-names">{{'เลสเตอร์ ซิตี้'}}</td>
-                        <td>{{'38'}}</td>
-                        <td>{{'32'}}</td>
-                        <td>{{'81'}}</td>
-                    </tr>
-            {% endfor %}
+            <tr class="rank-1 league-table clickable-row" data-href='#'>
+                <td>1</td>
+                <td class="league-table__team-names">เลสเตอร์ ซิตี้</td>
+                <td>38</td>
+                <td>32</td>
+                <td>81</td>
+            </tr>
+            <tr class="rank-2 league-table clickable-row" data-href='#'>
+                <td>2</td>
+                <td class="league-table__team-names"><a href="#">อาร์เซนอล</a></td>
+                <td>38</td>
+                <td>29</td>
+                <td>71</td>
+            </tr>
+            <tr class="rank-3 league-table clickable-row" data-href='#'>
+                <td>3</td>
+                <td class="league-table__team-names">ทอตนัมฮอตสเปอร์</td>
+                <td>38</td>
+                <td>34</td>
+                <td>70</td>
+            </tr>
+            <tr class="rank-4 league-table clickable-row" data-href='#'>
+                <td>4</td>
+                <td class="league-table__team-names">แมนเชสเตอร์ซิตี</td>
+                <td>38</td>
+                <td>30</td>
+                <td>66</td>
+            </tr>
+            <tr class="league-table clickable-row" data-href='#'>
+                <td>5</td>
+                <td class="league-table__team-names">แมนเชสเตอร์ ยูไนเต็ท</td>
+                <td>38</td>
+                <td>14</td>
+                <td>66</td>
+            </tr>
+            <tr class="league-table clickable-row" data-href='#'>
+                <td>6</td>
+                <td class="league-table__team-names">เซาแทมป์ตัน</td>
+                <td>38</td>
+                <td>18</td>
+                <td>63</td>
+            </tr>
+            <tr class="league-table clickable-row" data-href='#'>
+                <td>7</td>
+                <td class="league-table__team-names">เวสต์แฮมยูไนเต็ด</td>
+                <td>38</td>
+                <td>14</td>
+                <td>62</td>
+            </tr>
+            <tr class="league-table clickable-row" data-href='#'>
+                <td>8</td>
+                <td class="league-table__team-names">ลิเวอร์พูล</td>
+                <td>38</td>
+                <td>13</td>
+                <td>60</td>
+            </tr>
+            <tr class="league-table clickable-row" data-href='#'>
+                <td>9</td>
+                <td class="league-table__team-names">สโตกซิตี</td>
+                <td>38</td>
+                <td>-14</td>
+                <td>51</td>
+            </tr>
+            <tr class="league-table clickable-row" data-href='#'>
+                <td>10</td>
+                <td class="league-table__team-names">เชลซี</td>
+                <td>38</td>
+                <td>6</td>
+                <td>50</td>
+            </tr>
             </tbody>
         </table>
     </div>
