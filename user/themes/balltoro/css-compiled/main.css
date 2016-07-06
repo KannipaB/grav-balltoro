@@ -184,23 +184,25 @@
 .toro-paginator a {
   color: #FA1E64; }
 
-.social__button {
-  color: #FFFFFF;
-  text-decoration: none !important;
-  text-align: center;
-  padding: 5px; }
-  .social__button:hover, .social__button:focus, .social__button:active {
-    color: #FFFFFF; }
-  .social__button--facebook {
-    background: #3B5998; }
-  .social__button--twitter {
-    background: #55acee; }
-  .social__button--google-plus {
-    background: #dd4b39; }
-  .social__button--line {
-    background: #00DD00; }
-.social__border {
-  border-bottom: #FFC025 8px solid; }
+.social {
+  margin-top: 1rem; }
+  .social__button {
+    color: #FFFFFF;
+    text-decoration: none !important;
+    text-align: center;
+    padding: 5px; }
+    .social__button:hover, .social__button:focus, .social__button:active {
+      color: #FFFFFF; }
+    .social__button--facebook {
+      background: #3B5998; }
+    .social__button--twitter {
+      background: #55acee; }
+    .social__button--google-plus {
+      background: #dd4b39; }
+    .social__button--line {
+      background: #00DD00; }
+  .social__border {
+    border-bottom: #FFC025 8px solid; }
 
 .breadcrumb-bar {
   background: #eceeef; }

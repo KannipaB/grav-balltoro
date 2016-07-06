@@ -1,0 +1,41 @@
+{% include 'partials/social.html.twig' %}
+
+<div class="row m-t-3">
+    <div class="club">
+        <div class="club__header">
+            <h5>เลสเตอร์ ซิตี้</h5>
+            <h6>จิ้งจอกสยาม</h6>
+        </div>
+        <div class="club__cover">
+            <img src="../../images/club-cover-none.png" class="img-fluid" alt="">
+        </div>
+        <div class="club__info m-t-1">
+            <div class="club__info--row">
+                <span>Club Name:</span>
+                <span>เลสเตอร์ ซิตี้</span>
+            </div>
+            <div class="club__info--row">
+                <span>Stadium:</span>
+                <span>King Power Stadium</span>
+            </div>
+            <div class="club__info--row">
+                <span>League:</span>
+                <span>Premier League</span>
+            </div>
+            <div class="club__info--row">
+                <span>Head Coach:</span>
+            </div>
+            <div class="club__info--logo text-xs-center">
+                <img src="../../images/leicester-city.jpg" alt="">
+            </div>
+        </div>
+
+        {% block tab_player %}
+            {% include 'club/player.html.twig' %}
+        {% endblock %}
+
+    </div>
+</div>
+
+{% include 'club/news.html.twig' %}
+{% include 'club/relate.html.twig' %}
