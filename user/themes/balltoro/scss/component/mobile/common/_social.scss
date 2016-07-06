@@ -7,6 +7,7 @@ $social-icon-color: #FFFFFF;
 $border-bottom-color: #FFC025;
 
 .social {
+    margin-top: 1rem;
     &__button {
         color: $social-icon-color;
         text-decoration: none !important;
