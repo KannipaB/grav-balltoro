@@ -16,6 +16,8 @@ $club-other-logo-bg: #f1f1f1;
 $club-table-header-color: #203647;
 $club-table-border-color: $club-table-header-color;
 
+$personal-head-color: #FA1E64;
+
 .club {
     font-size: .8rem;
     &__header {
@@ -53,6 +55,10 @@ $club-table-border-color: $club-table-header-color;
 }
 
 .club-players {
+    font-size: .8rem;
+    &__header {
+        border-bottom: $club-header-border-color 8px solid;
+    }
     list-style: none;
     padding: 0;
     li {
@@ -162,6 +168,23 @@ $club-table-border-color: $club-table-header-color;
         &--logo {
             text-align: center;
             background-color: $club-other-logo-bg;
+        }
+    }
+}
+
+.personal{
+    &__number-cover{
+        display: block;
+        font-size: 4rem;
+        font-weight: bold;
+        padding: 1rem 0;
+    }
+    &__list{
+        &--head{
+            display: inline-block;
+            color: $personal-head-color;
+            font-weight: bold;
+            width: 30%;
         }
     }
 }
