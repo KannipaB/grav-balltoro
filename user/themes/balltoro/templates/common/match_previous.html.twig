@@ -1,23 +1,39 @@
+{% set link = '#' %}
+{#  row link variable in data-href='#'  #}
+{% set status = 'ft' %}
+{# status variable in league-table--gray set to 'ft' or 'live'#}
+
 <div class="row result-board">
     <div class="row result-board__button collapsed" data-toggle="collapse" href="#collapse-dropdown" aria-expanded="false" aria-controls="collapse-dropdown">
         <span>ผลบอล</span>
     </div>
     <div class="collapse" id="collapse-dropdown">
-        <div class="dropdown" >
-            <div  type="button" id="menu-toggler" data-toggle="dropdown">
+        <div class="dropdown">
+            <div type="button" id="menu-toggler" data-toggle="dropdown">
                 <i class="fa fa-chevron-down pull-xs-right result-board__league-dropdown--icon"></i>
                 <div class="result-board__league-dropdown">
                     <span>English Premier League</span>
                 </div>
             </div>
-            <div class="dropdown-menu result-board__league-dropdown--list" role="menu" aria-labelledby="menu-toggler">
-                {% for i in 0..5 %}
-                    <a href="#">league result</a>
-                {% endfor %}
+            <div class="dropdown-menu result-board__league-dropdown--list league-table" role="menu" aria-labelledby="menu-toggler">
+                <table class="table-sm league-table--box">
+                    <tbody>
+                    {% for i in 0..5 %}
+                        {#  row link goes in data-href='#'  #}
+                        <tr class="league-table clickable-row result-board" data-href='{{ link }}'>
+                            <td>{{ 'Palace' }}</td><td>{{ '19:00' }}</td><td>{{ 'everton' }}</td>
+                            {% if status == 'live'%}
+                                <td class="league-table__live league-table--status-icon">LIVE</td>
+                            {% elseif status == 'ft' %}
+                                <td class="league-table__ft league-table--status-icon">FT</td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </div>
         <div class="result-board__league-result">
-
             <p>No Match Result.</p>
         </div>
     </div>
