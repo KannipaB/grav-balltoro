@@ -3,7 +3,9 @@
 {% block content %}
     <div class="container">
         <div class="col-xs-12">
-            {% include 'news/content.mobile.html.twig' %}
+            {{ page.beer }}
+            {{ page.header.beer }}
+            {{ dump(page) }}
         </div>
     </div>
 {% endblock %}
