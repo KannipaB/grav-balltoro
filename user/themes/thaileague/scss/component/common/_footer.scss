@@ -1,0 +1,16 @@
+.footer{
+    color: #FFFFFF;
+    text-align: center;
+    &__sponsor{
+        background: #133960;
+    }
+    &__sitemap{
+        background: #373738;
+        ul{
+            display: inline-block;
+            li{
+                list-style: none;
+            }
+        }
+    }
+}
