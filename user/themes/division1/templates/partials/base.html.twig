@@ -1,0 +1,24 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+    <head>
+        {% block header %}
+            {% include 'partials/header/header.html.twig' %}
+        {% endblock %}
+    </head>
+
+    <body>
+        {% block navbar %}
+            {% include 'common/navbar.html.twig' %}
+        {% endblock %}
+
+        {% block body %}
+            {% include 'home/body_home.html.twig' %}
+        {% endblock %}
+
+        {% block footer %}
+            {% include 'common/footer.html.twig' %}
+        {% endblock %}
+    </body>
+
+</html>

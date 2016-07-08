@@ -13,7 +13,7 @@ home:
   alias: /home
   hide_in_urls: false
 pages:
-  theme: balltoro
+  theme: division1
   order:
     by: default
     dir: asc

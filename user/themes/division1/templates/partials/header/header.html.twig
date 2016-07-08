@@ -1,0 +1,14 @@
+<link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}"/>
+<link rel="canonical" href="{{ page.url(true, true) }}"/>
+{% block metadata %}
+    {% include 'partials/header/metadata.html.twig' %}
+{% endblock %}
+{% block title %}
+    <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+{% endblock %}
+{% block stylesheets %}
+    {% include 'partials/header/style.html.twig' %}
+{% endblock %}
+{% block javascripts %}
+    {% include 'partials/header/script.html.twig' %}
+{% endblock %}
