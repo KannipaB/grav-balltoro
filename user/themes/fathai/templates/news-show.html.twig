@@ -1,0 +1,38 @@
+{% embed 'partials/base.html.twig' %}
+
+    {% set collection = page.collection() %}
+
+    {% block content %}
+        {{ dump(page.title) }}
+        {{ dump(page) }}
+        <div class="container">
+            <div class="col-xs-12">
+                <div class="row ad-box text-xs-center">ADVERTISE HERE</div>
+                <div class="row news-details">
+                    <div class="news-details__image"><img src="{{ page.media['sample-image.png'].url }}" alt=""></div>
+                    <div class="news-details__meta">
+                        <p class="news-details__meta--author">{{ page.taxonomy.author|first }}</p>
+                        <p class="news-details__meta--date">{{ page.date |date('y/m/d') }}</p>
+                        <p class="news-details__meta--update">{{ page.publish_date |date('y/m/d') }}</p>
+                        {% for p in page.taxonomy.tag %}
+                            <p class="news-details__meta--tags">{{ p }}</p>
+                        {% endfor %}
+                    </div>
+                    <div class="news-details__headline"><p>{{ page.title }}</p></div>
+                    <div class="news-details__content">
+                        <div>
+                            <div class="col-xs-2 news-details__content--quote"></div>
+                            <div class="col-xs-10 news-details__content--sub-headline text-xs-center">
+                                <p>{{ page.subtitle }}</p>
+                            </div>
+                        </div>
+                        <p>{{ page.content }}</p>
+                    </div>
+                </div>
+                <div class="row ad-box text-xs-center">ADVERTISE HERE</div>
+            </div>
+        </div>
+        <div class="bottom-separator"></div>
+    {% endblock %}
+
+{% endembed %}

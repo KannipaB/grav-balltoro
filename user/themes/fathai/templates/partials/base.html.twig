@@ -1,0 +1,53 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+    <head>
+        {% block head %}
+            <meta charset="utf-8"/>
+            <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+            {% include 'partials/metadata.html.twig' %}
+
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}"/>
+            <link rel="canonical" href="{{ page.url(true, true) }}"/>
+
+            {% block stylesheets %}{% include 'partials/style.html.twig' %}{% endblock %}
+            {{ assets.css() }}
+
+            {% block javascripts %}{% include 'partials/script.html.twig' %}{% endblock %}
+            {{ assets.js() }}
+        {% endblock head%}
+    </head>
+
+    <body id="top" class="{{ page.header.body_classes }}">
+        <div id="sb-site">
+            {% block navbar %}
+                {% include 'partials/navbar.html.twig' %}
+            {% endblock %}
+
+            {% block header %}
+                {% include 'partials/header.html.twig' %}
+            {% endblock %}
+
+            {% block breadcrumb %}{% endblock %}
+
+            {% block body %}
+                {% block social_box %}{% endblock %}
+
+                <div class="container">
+                    {% block content %}{% endblock %}
+                </div>
+
+                {% block footer %}
+                    {% include 'partials/footer.html.twig' %}
+                {% endblock %}
+x
+            {% endblock %}
+
+        </div>
+
+        {% block scripts %}{% endblock %}
+
+    </body>
+</html>
