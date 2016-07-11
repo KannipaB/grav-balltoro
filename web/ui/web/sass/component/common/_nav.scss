@@ -1,0 +1,32 @@
+.nav-fix {
+    padding: 0;
+}
+
+.nav-top {
+    background: #133960;
+    height: 75px;
+    position: relative;
+    &__logo {
+        img {
+            position: absolute;
+            left: 0;
+            top: .5rem;
+        }
+    }
+    &__league, &__d1, &__d2 {
+        padding-top: .25rem;
+        img {
+            height: 65px;
+        }
+    }
+    &__d1 {
+
+    }
+    &__d2 {
+
+    }
+}
+
+.nav-menu {
+    background: #216CB6;
+}

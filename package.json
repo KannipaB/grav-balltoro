@@ -1,0 +1,39 @@
+{
+  "name": "fa-thai",
+  "version": "1.0.0",
+  "description": "fa-thai",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KannipaB/grav-balltoro.git"
+  },
+  "author": "beer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KannipaB/grav-balltoro/issues"
+  },
+  "homepage": "https://github.com/KannipaB/grav-balltoro#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.2",
+    "bootstrap-notify": "^3.1.3",
+    "bourbon": "^4.2.7",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-debug": "^2.1.2",
+    "gulp-if": "^2.0.1",
+    "gulp-order": "^1.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.4",
+    "gulp-uglifycss": "^1.0.6",
+    "gulp-util": "^3.0.7",
+    "jquery": "^2.2.4",
+    "merge-stream": "^1.0.0",
+    "node-sass": "^3.4.2",
+    "tether": "^1.3.2"
+  }
+}

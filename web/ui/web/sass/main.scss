@@ -1,0 +1,24 @@
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../../node_modules/bourbon/app/assets/stylesheets/bourbon";
+
+@import url('http://fonts.googleapis.com/css?family=Oswald');
+
+/**
+ * Debug mode will draw body background-color in deference colors:
+ **/
+$IS_DEBUG: true;
+
+@import "base";
+@import "utils";
+@import "component/component";
+
+// default
+@import "xl/main";
+// desktop / landscape tablet
+@import "lg/main";
+// tablet
+@import "md/main";
+// landscape phone
+@import "sm/main";
+// phone
+@import "xs/main";

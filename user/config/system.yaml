@@ -13,7 +13,8 @@ home:
   alias: /home
   hide_in_urls: false
 pages:
-  theme: division1
+
+  theme: fathai
   order:
     by: default
     dir: asc

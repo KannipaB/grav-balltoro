@@ -1,0 +1,31 @@
+$latest-date-color: rgba(0, 0, 0, .4);
+$latest-separator-color: #f1f1f1;
+$latest-header-color: #FFC025;
+
+.news {
+    &__header {
+        display: inline-block;
+        width: 100%;
+        border-bottom: $latest-header-color 8px solid;
+        p, h5 {
+            margin: 0;
+        }
+        a {
+            font-size: 2rem;
+        }
+    }
+    &__content {
+        display: table;
+        padding: 1rem 0;
+        border-bottom: $latest-separator-color 1px solid;
+        &--image {
+            img {
+                max-width: 100%;
+            }
+        }
+        &--date {
+            font-size: .9rem;
+            color: $latest-date-color;
+        }
+    }
+}
