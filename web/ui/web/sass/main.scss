@@ -1,0 +1,50 @@
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../../node_modules/bourbon/app/assets/stylesheets/bourbon";
+
+@import url('http://fonts.googleapis.com/css?family=Oswald');
+
+/**
+ * Debug mode will draw body background-color in deference colors:
+ *  - xl: transparent
+ *  - lg: red
+ *  - md: green
+ *  - sm: blue
+ *  - xs: yellow
+ **/
+$IS_DEBUG: true;
+
+@import "base";
+@import "utils";
+@import "component/component";
+
+// default
+@import "xl/main";
+// desktop / landscape tablet
+@import "lg/main";
+// tablet
+@import "md/main";
+// landscape phone
+@import "sm/main";
+// phone
+@import "xs/main";
+
+
+article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+}
+
+h1 {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    font-size: 36px;
+    letter-spacing: 3px;
+    color: #fff;
+    font-family: Oswald, sans-serif;
+    text-align: center;
+}
