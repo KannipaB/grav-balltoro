@@ -1,0 +1,36 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+	<div class="container">
+		<div class="col-xs-12 text-xs-center">
+			{% block hilight %}
+				{% include 'home/hilight.html.twig' %}
+			{% endblock %}
+
+			{% block featured %}
+				{% include 'home/featured.html.twig' %}
+			{% endblock %}
+
+			{% block livescore %}
+				{% include 'home/livescore.html.twig' %}
+			{% endblock %}
+
+			<div class="row">
+				<div class="col-xs-6">
+					{% block news %}
+						{% include 'home/news.html.twig' %}
+					{% endblock %}
+				</div>
+				<div class="col-xs-6">
+					{% block table %}
+						{% include 'home/table.html.twig' %}
+					{% endblock %}
+
+					{% block test %}
+						{% include 'home/table.html.twig' %}
+					{% endblock %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

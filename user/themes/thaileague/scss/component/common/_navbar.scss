@@ -1,0 +1,17 @@
+.thaileague-navbar{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    &__main-menu{
+        background: #363636;
+        height: 80px;
+    }
+    &__sub-menu{
+        background: #E22319;
+        height: 45px;
+    }
+    &__slider{
+        background: #f1f1f1;
+        height: 250px;
+    }
+}
