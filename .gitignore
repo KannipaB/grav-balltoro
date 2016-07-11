@@ -7,3 +7,5 @@
 *.log
 /node_modules
 /vendor
+/web/assets
+/user/themes/fathai/.sass-cache
