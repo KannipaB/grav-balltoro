@@ -1,65 +1,32 @@
-$balltoro-gray: #333;
-$toggler: $balltoro-gray;
-$separator-list: $balltoro-gray;
-$collapse: $balltoro-gray;
-$collapse-font: white;
-$collapse-bg: black;
-$collapse-border: black;
-$balltoro-red: #FA1E64;
-$nav-list: $balltoro-red;
-$nav-background: #222;
+.nav-fix {
+    padding: 0;
+}
 
-.nav-bar {
-    background: $nav-background;
-    &--position {
-        padding-left: 0;
-    }
+.nav-top {
+    background: #133960;
+    height: 75px;
+    position: relative;
     &__logo {
-        height: 45px;
-        padding-left: 15px;
+        img {
+            position: absolute;
+            left: 0;
+            top: .5rem;
+        }
     }
-    &__toggler {
-        font-size: 1.8rem;
-        border-radius: 5px;
-        background-color: $toggler;
-        padding: 3px 7px;
-        margin: 4px 10px;
+    &__league, &__d1, &__d2 {
+        padding-top: .25rem;
+        img {
+            height: 65px;
+        }
+    }
+    &__d1 {
+
+    }
+    &__d2 {
+
     }
 }
 
-.nav-list {
-    color: $nav-list;
-    &__menu {
-        border-top: 1px solid $separator-list;
-        display: block;
-        line-height: 45px;
-        padding-left: 15px;
-        &:hover, &:focus {
-            color: $nav-list;
-        }
-    }
-    &--collapse-toggler {
-        float: right;
-        padding: 14px;
-        margin-right: 10px;
-        color: $collapse-font;
-    }
-    &__collapse {
-        color: $collapse-font;
-        background-color: $collapse;
-        display: block;
-        border-bottom: 1px solid $collapse-border;
-        padding: 0.7rem;
-        &:hover, &:focus {
-            text-decoration: none;
-            background-color: $collapse-bg;
-        }
-        &--icon {
-            padding-right: 10px;
-        }
-    }
-    &__profile-picture{
-        max-width: 100%;
-        max-height: 100%;
-    }
+.nav-menu {
+    background: #216CB6;
 }
