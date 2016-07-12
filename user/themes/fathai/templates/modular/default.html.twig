@@ -1,0 +1,19 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            {% include 'modular/highlight.html.twig' %}
+            {% include 'home/schedule.html.twig' %}
+        </div>
+        <div class="col-md-6">
+            {% include 'home/news.html.twig' %}
+        </div>
+        <div class="col-md-6">
+            {% include 'common/standing.html.twig' %}
+        </div>
+    </div>
+
+    {% include 'home/scoop.html.twig'%}
+    {% include 'home/video.html.twig'%}
+{% endblock %}
